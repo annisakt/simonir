@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Utama">
+        <menu>
+            <item
+                android:id="@+id/menuutama"
+                android:icon="@drawable/home"
+                android:title="Halaman Utama" />
+            <item
+                android:id="@+id/menusungai"
+                android:icon="@drawable/water"
+                android:title="Data sungai" />
+            <item
+                android:id="@+id/menumonitoring"
+                android:icon="@drawable/monitoring"
+                android:title="Data Monitoring" />
+            <item
+                android:id="@+id/item_pengaduan"
+                android:icon="@drawable/report"
+                android:title="Pengaduan" />
+        </menu>
+    </item>
+
+    <item android:title="Tentang">
+        <menu>
+            <item
+                android:id="@+id/tentang"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Tentang" />
+
+        </menu>
+    </item>
+
+</menu>

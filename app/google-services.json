@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "471910046199",
+    "firebase_url": "https://simonir-790db.firebaseio.com",
+    "project_id": "simonir-790db",
+    "storage_bucket": "simonir-790db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471910046199:android:3dbb836c2e280d79",
+        "android_client_info": {
+          "package_name": "com.example.annis.apps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471910046199-1d68inpr6lj71mn54hnigc7h33iif88v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Fvx6j1AyTqo72vBKgF7Ems-F2dIeyQ0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
