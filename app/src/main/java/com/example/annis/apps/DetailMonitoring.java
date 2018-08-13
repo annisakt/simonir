@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.support.v4.widget.DrawerLayout;
@@ -19,6 +21,9 @@ public class DetailMonitoring extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_monitoring);
+        WebView web = (WebView) findViewById(R.id.web_view);
+        web.loadUrl("http://google.com");
+        web.setWebViewClient(new WebViewClient());
         toolbar = (Toolbar)findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);

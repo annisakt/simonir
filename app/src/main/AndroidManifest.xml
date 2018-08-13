@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="id.hes.hestimr.antingapp.permission.RECEIVE" />
+
     <permission
         android:name="com.example.annis.apps.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
@@ -19,15 +20,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
             android:icon="@drawable/calm"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <!-- <activity android:name=".Sungai" /> -->
         <!-- <activity android:namcom.example.annis.apps.Monitoringring" /> -->
         <activity android:name=".Pengaduan" />
@@ -40,6 +38,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/notification_channel_id" />
@@ -64,6 +63,8 @@
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
+        <activity android:name=".GraphFragment"></activity>
     </application>
 
 </manifest>
