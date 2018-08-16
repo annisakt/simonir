@@ -10,33 +10,199 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
     <LinearLayout
-        android:layout_width="278dp"
-        android:layout_height="116dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="#59ABE3"
-        android:layout_marginTop="100dp"/>
-        <!--android:paddingTop="100dp"-->
+        android:id="@+id/linear1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/Rl1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgwater"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/water" />
+
+            <TextView
+                android:id="@+id/judulsungai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgwater"
+                android:paddingTop="10dp"
+                android:text="Data Sungai"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judulsungai"
+                android:text="Sungai Sapi"
+                android:textSize="11dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sungaiopen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/monitoring"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/fr1"
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgmonitoring"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/monitoring" />
+
+            <TextView
+                android:id="@+id/judulmonitoring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgmonitoring"
+                android:paddingTop="10dp"
+                android:text="Monitoring"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judulmonitoring"
+                android:text="Data Ketinggian Sungai"
+                android:textSize="11dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/monitoringopen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
     <LinearLayout
-        android:layout_width="278dp"
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
         android:layout_height="116dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="#59ABE3"
-        android:layout_marginTop="250dp"/>
-    <LinearLayout
-        android:layout_width="278dp"
-        android:layout_height="116dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="#59ABE3"
-        android:layout_marginTop="400dp"/>
-    <LinearLayout
-        android:layout_width="278dp"
-        android:layout_height="116dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="#59ABE3"
-        android:layout_marginTop="550dp"/>
+        android:layout_below="@+id/linear1"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="100dp"
+            android:background="@drawable/rounded"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:id="@+id/imgpengaduan"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/report" />
+
+            <TextView
+                android:id="@+id/judulpengaduan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgpengaduan"
+                android:paddingTop="10dp"
+                android:text="Pengaduan"
+                android:textSize="@dimen/textsize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/judulpengaduan"
+                android:text="Jumlah Pengaduan"
+                android:textSize="11dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/pengaduanopen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/laporan"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/rounded"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/imglaporan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/monitoring" />
+
+        <TextView
+            android:id="@+id/judullaporan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imglaporan"
+            android:paddingTop="10dp"
+            android:text="Laporan"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judullaporan"
+            android:text="Data Laporan"
+            android:textSize="11dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/laporanopen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_forward_black_24dp" />
+    </LinearLayout>
 </RelativeLayout>
 
