@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -22,7 +23,9 @@ public class DetailMonitoring extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_monitoring);
         WebView web = (WebView) findViewById(R.id.web_view);
-        web.loadUrl("http://google.com");
+        WebSettings webSettings = web.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        web.loadUrl("http://informatikapolines.com/anting/grafikandroid/grafikmonitoring.php");
         web.setWebViewClient(new WebViewClient());
         toolbar = (Toolbar)findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);

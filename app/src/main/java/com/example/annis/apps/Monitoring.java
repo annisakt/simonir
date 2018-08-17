@@ -78,7 +78,7 @@ public class Monitoring extends Fragment {
                 data = new ArrayList<>(Arrays.asList(jsonResponse.getMonitoring()));
                 adapter = new AdapterMonitoring(getContext(), data);
                 recyclerView.setAdapter(adapter);
-            //    Toast.makeText(getContext(), "data berhasil", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "data berhasil", Toast.LENGTH_LONG).show();
                 Log.d("data", data.get(0).getKetinggian());
             }
             @Override

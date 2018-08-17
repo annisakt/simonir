@@ -3,6 +3,7 @@ package com.example.annis.apps.api;
 import com.example.annis.apps.modal.Result;
 
 import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -23,15 +24,25 @@ public interface ApiService {
     @GET()
     Call<JsonList>getRekap(@Url String url);
 
-    //insertdata
     @Multipart
     @POST("upload.php")
-    Call<Result> insertLaporan(@Part MultipartBody.Part nama_pelapor,
-                               @Part MultipartBody.Part no_hp,
-                               @Part MultipartBody.Part nama_sungai,
-                               @Part MultipartBody.Part lokasi_sungai,
-                               @Part MultipartBody.Part deskripsi,
-                               @Part MultipartBody.Part file);
+    Call<Result> uploadImage(
+            @Part MultipartBody.Part file,
+            @Part("name") RequestBody name,
+            @Part("nama_pelapor") String nama_pelapor,
+            @Part("no_hp") String no_hp,
+            @Part("nama_sungai") String nama_sungai,
+            @Part("lokasi_sungai") String lokasi_sungai,
+            @Part("deskripsi") String deskripsi);
+//    //insertdata
+//    @Multipart
+//    @POST("upload.php")
+//    Call<Result> insertLaporan(@Part MultipartBody.Part nama_pelapor,
+//                               @Part MultipartBody.Part no_hp,
+//                               @Part MultipartBody.Part nama_sungai,
+//                               @Part MultipartBody.Part lokasi_sungai,
+//                               @Part MultipartBody.Part deskripsi,
+//                               @Part MultipartBody.Part file);
     @FormUrlEncoded
     @POST("insert_laporan.php")
     Call<Result> insertLapo(@Field("nama_pelapor") String nama_pelapor,

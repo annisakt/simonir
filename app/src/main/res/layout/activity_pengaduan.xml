@@ -1,130 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="50dp"
-    android:layout_marginTop="50dp"
-    android:background="#adced6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:layout_marginTop="16dp"
     tools:context="com.example.annis.apps.Pengaduan">
-<!--NAma PElapor-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="60dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
         android:text="Nama Pelapor"
         android:id="@+id/txt1"
         />
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/editText"
-        android:layout_below="@+id/txt1"
+        android:layout_toRightOf="@+id/txt1"
+        android:inputType="textPersonName"
         />
 
     <!--No HP-->
     <TextView
         android:id="@+id/txthp"
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/txt1"
+        android:layout_marginLeft="30dp"
         android:text="No HP" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txthp"
-        android:id="@+id/editText1"
-        />
+        android:layout_toRightOf="@+id/txthp"
+        android:layout_below="@+id/editText"
+        android:layout_marginLeft="60dp"
+        android:id="@+id/editText1" />
+
     <!--Nama Sungai-->
     <TextView
         android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/txthp"
         android:text="Nama Sungai" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txt2"
+        android:layout_below="@+id/editText1"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/txt2"
         android:id="@+id/editText2"
         />
     <TextView
         android:id="@+id/txt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText2"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/txt2"
         android:text="Lokasi Sungai" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
         android:id="@+id/editText3"
-        android:layout_below="@+id/txt3" />
+        android:layout_below="@+id/editText2"
+        android:layout_toRightOf="@+id/txt3" />
 
     <TextView
         android:id="@+id/txt4"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/txt3"
         android:text="Deskripsi" />
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txt4" />
+        android:layout_below="@+id/editText3"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/txt4" />
 
-    <TextView
-        android:id="@+id/txt5"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt4"
+            android:layout_marginTop="20dp"
+            android:id="@+id/frame">
+
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/frame"
+                android:text="Bukti" />
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu_camera"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+
+                />
+        </FrameLayout>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frame"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_upload"
+            android:layout_centerHorizontal="true"
+            android:text="UPLOAD"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_upload"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnsave"
+            android:layout_centerHorizontal="true"
+            android:text="SIMPAN"/>
+    </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/editText4"
-        android:text="Bukti" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_home"
+        app:menu="@menu/activity_home_drawer" />
+</android.support.v4.widget.DrawerLayout>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt5"
-        android:text="Browse"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textt"
-        android:text=".jpg"
-        android:layout_toRightOf="@+id/button1"
-        android:layout_below="@+id/txt5"
-        />
-    <Button
-        android:id="@+id/buttonsave"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="50dp"
-        android:text="Kirim"
-        />
-    <ProgressBar
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:id="@+id/progressbar"
-        android:layout_centerInParent="true"/>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/fotobukti"
-        android:src="@mipmap/ic_launcher"
-        android:layout_below="@id/progressbar"/>
-
-</RelativeLayout>
 

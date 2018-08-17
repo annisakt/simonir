@@ -43,7 +43,7 @@ Toolbar toolbar;
         txthilir.setText(getIntent().getStringExtra("Hilir"));
         txtkemiringan.setText(getIntent().getStringExtra("Kemiringan"));
         txtpengelola.setText(getIntent().getStringExtra("Pengelola"));
-        Picasso.with(this).load(getIntent().getStringExtra("Gambar")).resize(150,150).into(imggambar);
+        Picasso.with(this).load("http://simonir.com/foto/"+getIntent().getStringExtra("Gambar")).resize(150,150).into(imggambar);
     }
 
     @Override

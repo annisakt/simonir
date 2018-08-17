@@ -65,6 +65,7 @@ public class AdapterMonitoring  extends RecyclerView.Adapter<AdapterMonitoring.V
                     intent.putExtra("Ketinggian", datam.get(posisi).getKetinggian());
                     intent.putExtra("Status", datam.get(posisi).getStatus());
                     intent.putExtra("Waktu", datam.get(posisi).getWaktu());
+
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                     Toast.makeText(view.getContext(), "You clicked " + clickedDataItem.getNama_sungai(), Toast.LENGTH_SHORT).show();

@@ -22,7 +22,6 @@ public class Home extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getActivity().setTitle("Halaman Utama");
-
     }
 
     private void setContentView(int activity_main) {
@@ -33,6 +32,5 @@ public class Home extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_home, container, false);
         return rootView;
     }
-
 
 }

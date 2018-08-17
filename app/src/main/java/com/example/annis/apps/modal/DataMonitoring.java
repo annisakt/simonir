@@ -64,4 +64,5 @@ public class DataMonitoring {
         this.waktu = waktu;
     }
 
+
 }

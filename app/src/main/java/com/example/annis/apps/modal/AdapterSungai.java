@@ -3,6 +3,7 @@ package com.example.annis.apps.modal;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +41,8 @@ public class AdapterSungai extends RecyclerView.Adapter<AdapterSungai.ViewHolder
         viewHolder.idSungai.setText(datas.get(i).getIdSungai());
         viewHolder.NamaSungai.setText(datas.get(i).getNamaSungai());
         viewHolder.LokasiSungai.setText(datas.get(i).getLokasiSungai());
-        Picasso.with(context).load(datas.get(i).getGambar()).placeholder(R.drawable.ic_launcher_background).resize(150, 150).into(viewHolder.imageView);
+//        Picasso.with(context).load(datas.get(i).getGambar()).resize(150, 150).into(viewHolder.imageView);
+        Picasso.with(context).load("http://simonir.com/foto/"+datas.get(i).getGambar()).resize(150, 150).into(viewHolder.imageView);
     }
 
     @Override

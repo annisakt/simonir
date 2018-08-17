@@ -1,53 +1,23 @@
 package com.example.annis.apps;
-
-
-        import android.annotation.SuppressLint;
-        import android.app.Notification;
-        import android.app.NotificationManager;
-        import android.app.PendingIntent;
+import android.annotation.SuppressLint;
         import android.content.BroadcastReceiver;
         import android.content.Context;
         import android.content.Intent;
-        import android.content.IntentFilter;
-        import android.content.SharedPreferences;
         import android.net.ConnectivityManager;
         import android.os.Bundle;
         import android.support.annotation.NonNull;
         import android.support.design.widget.NavigationView;
-        import android.support.design.widget.Snackbar;
         import android.support.v4.app.Fragment;
         import android.support.v4.app.FragmentTransaction;
-        import android.support.v4.app.NotificationCompat;
-        import android.support.v4.content.LocalBroadcastManager;
         import android.support.v4.view.GravityCompat;
-        import android.support.v4.view.MenuItemCompat;
         import android.support.v4.widget.DrawerLayout;
         import android.support.v7.app.ActionBarDrawerToggle;
         import android.support.v7.app.AppCompatActivity;
         import android.support.v7.widget.Toolbar;
-        import android.text.TextUtils;
-        import android.text.format.DateUtils;
-        import android.util.Log;
         import android.view.Menu;
         import android.view.MenuItem;
-        import android.view.MotionEvent;
-        import android.view.View;
-        import android.widget.Button;
         import android.widget.EditText;
-        import android.widget.ImageView;
-        import android.widget.RemoteViews;
-        import android.widget.TextView;
         import android.widget.Toast;
-        import com.squareup.picasso.Picasso;
-
-        import org.json.JSONException;
-        import org.json.JSONObject;
-
-        import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.Arrays;
-        import java.util.HashMap;
-        import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -97,13 +67,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
-
-        /*MenuItem item = menu.findItem(R.id.action_notif);
-        MenuItemCompat.setActionView(item, R.layout.count_badge);
-        View view = MenuItemCompat.getActionView(item);
-        notifCount = (Button) view.findViewById(R.id.notif_count);
-        notifCount.setText(String.valueOf(mNotifCount));
-        return super.onCreateOptionsMenu(menu);*/
         return true;
     }
 
@@ -123,29 +86,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new Home();
                 break;
             case R.id.item_pengaduan:
-               fragment = new Pengaduan();
-
-                break;
+               Intent intent = new Intent(getApplicationContext(), Pengaduan.class);
+               startActivity(intent);
             case R.id.menusungai:
                 fragment = new Sungai();
                 break;
             case R.id.menumonitoring:
                 fragment = new Monitoring();
                 break;
-//            case R.id.pakan:
-//                fragment = new DataPakan();
-//                break;
-//            case R.id.menu_monitoring:
-//                fragment = new MonitoringKandang();
-//                break;
-//            case R.id.menu_jadwal:
-//                bundle.putString("id_user", sharedPrefManager.getSPId().toString());
-//                fragment = new JadwalMakan();
-//                fragment.setArguments(bundle);
-//                break;
-//            case R.id.menu_laporan:
-//                fragment = new Laporan();
-//                break;
+
         }
 
         //replacing the fragment
